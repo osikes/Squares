@@ -9,5 +9,10 @@
 #import "MovingObject.h"
 
 @implementation MovingObject
-
+@synthesize down;
+-(id) init{
+    if( self = [super initWithFile:@"Icon-72.png"] ){
+    }
+    return self;
+}
 @end

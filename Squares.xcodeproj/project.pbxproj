@@ -137,6 +137,7 @@
 		0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */; };
 		0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF94E1627A362001CF3B9 /* Grid.m */; };
 		0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFCF9501627AA3B001CF3B9 /* turtle.png */; };
+		5AD36609165727C900A14599 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36608165727C900A14599 /* GameObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -409,6 +410,9 @@
 		0DFCF94D1627A362001CF3B9 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		0DFCF94E1627A362001CF3B9 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		0DFCF9501627AA3B001CF3B9 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
+		5AD36607165727C900A14599 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		5AD36608165727C900A14599 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		5AD3660C16572DB600A14599 /* CommonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,10 +438,13 @@
 		0DD4CC771655F7BD0009AB13 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				5AD3660B16572D9B00A14599 /* Constants */,
 				0DD4CC791655F7DE0009AB13 /* Hero.h */,
 				0DD4CC7A1655F7DE0009AB13 /* Hero.m */,
 				0DD4CC7C1655F8770009AB13 /* MovingObject.h */,
 				0DD4CC7D1655F8770009AB13 /* MovingObject.m */,
+				5AD36607165727C900A14599 /* GameObject.h */,
+				5AD36608165727C900A14599 /* GameObject.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -858,6 +865,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5AD3660B16572D9B00A14599 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3660C16572DB600A14599 /* CommonProtocol.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1039,6 +1054,7 @@
 				0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */,
 				0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */,
 				0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */,
+				5AD36609165727C900A14599 /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

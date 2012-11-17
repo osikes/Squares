@@ -7,7 +7,11 @@
 //
 
 #import "CCSprite.h"
-
-@interface MovingObject : CCSprite
-
+#import "GameObject.h"
+@interface MovingObject : GameObject
+{
+	BOOL down;
+}
+@property (nonatomic, assign) BOOL down;
+-(id) init;
 @end

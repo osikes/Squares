@@ -7,12 +7,16 @@
 //
 
 #import "CCSprite.h"
-
-@interface Hero : CCSprite
+#import "GameObject.h"
+#import "MovingObject.h"
+#import "CommonProtocol.h"
+@interface Hero :GameObject
 {
     int count;
 }
-- (void) update;
 -(id) initMy;
+-(void)updateStateWithDeltaTime:(ccTime)deltaTime andListOfGameObjects:(NSMutableArray*)movers;
+@property (readwrite) CharacterStates characterState;
+-(void)changeState:(CharacterStates)newState;
 
 @end
