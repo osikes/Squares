@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7A1655F7DE0009AB13 /* Hero.m */; };
+		0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7D1655F8770009AB13 /* MovingObject.m */; };
 		0DFCF7B61627A1E4001CF3B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B51627A1E4001CF3B9 /* QuartzCore.framework */; };
 		0DFCF7B81627A1E4001CF3B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B71627A1E4001CF3B9 /* OpenGLES.framework */; };
 		0DFCF7BA1627A1E4001CF3B9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B91627A1E4001CF3B9 /* OpenAL.framework */; };
@@ -133,9 +135,15 @@
 		0DFCF9411627A1E6001CF3B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9401627A1E6001CF3B9 /* AppDelegate.m */; };
 		0DFCF9441627A1E6001CF3B9 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */; };
 		0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */; };
+		0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF94E1627A362001CF3B9 /* Grid.m */; };
+		0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFCF9501627AA3B001CF3B9 /* turtle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DD4CC791655F7DE0009AB13 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		0DD4CC7A1655F7DE0009AB13 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		0DD4CC7C1655F8770009AB13 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
+		0DD4CC7D1655F8770009AB13 /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 		0DFCF7B11627A1E4001CF3B9 /* Squares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFCF7B51627A1E4001CF3B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0DFCF7B71627A1E4001CF3B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -398,6 +406,9 @@
 		0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		0DFCF9451627A1E6001CF3B9 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		0DFCF94D1627A362001CF3B9 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		0DFCF94E1627A362001CF3B9 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		0DFCF9501627AA3B001CF3B9 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +431,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD4CC771655F7BD0009AB13 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0DD4CC791655F7DE0009AB13 /* Hero.h */,
+				0DD4CC7A1655F7DE0009AB13 /* Hero.m */,
+				0DD4CC7C1655F8770009AB13 /* MovingObject.h */,
+				0DD4CC7D1655F8770009AB13 /* MovingObject.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		0DFCF7A61627A1E4001CF3B9 = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +478,9 @@
 		0DFCF7C71627A1E4001CF3B9 /* Squares */ = {
 			isa = PBXGroup;
 			children = (
+				0DD4CC771655F7BD0009AB13 /* Objects */,
+				0DFCF94D1627A362001CF3B9 /* Grid.h */,
+				0DFCF94E1627A362001CF3B9 /* Grid.m */,
 				0DFCF93F1627A1E6001CF3B9 /* AppDelegate.h */,
 				0DFCF9401627A1E6001CF3B9 /* AppDelegate.m */,
 				0DFCF9421627A1E6001CF3B9 /* HelloWorldLayer.h */,
@@ -472,6 +497,7 @@
 		0DFCF7C81627A1E4001CF3B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0DFCF9501627AA3B001CF3B9 /* turtle.png */,
 				0DFCF7C91627A1E4001CF3B9 /* Default.png */,
 				0DFCF7CB1627A1E4001CF3B9 /* Default-Landscape~ipad.png */,
 				0DFCF7CD1627A1E4001CF3B9 /* fps_images.png */,
@@ -895,6 +921,7 @@
 				0DFCF7DE1627A1E4001CF3B9 /* Icon@2x.png in Resources */,
 				0DFCF7E11627A1E4001CF3B9 /* iTunesArtwork in Resources */,
 				0DFCF91F1627A1E6001CF3B9 /* ChangeLog in Resources */,
+				0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1036,9 @@
 				0DFCF9411627A1E6001CF3B9 /* AppDelegate.m in Sources */,
 				0DFCF9441627A1E6001CF3B9 /* HelloWorldLayer.m in Sources */,
 				0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */,
+				0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */,
+				0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */,
+				0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1142,7 @@
 				0DFCF94C1627A1E6001CF3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
