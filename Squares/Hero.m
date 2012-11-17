@@ -9,12 +9,15 @@
 #import "Hero.h"
 #import "MovingObject.h"
 #import "cocos2d.h"
+#import "GameObject.h"
+#import "GameOver.h"
 #import "CommonProtocol.h"
 @implementation Hero
 
 @synthesize characterState;
 -(id) initMy{
     if( self = [super initWithFile:@"turtle.png"] ){
+        characterState = kStateIdle;
     }
     return self;
 }
@@ -24,29 +27,33 @@
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime andListOfGameObjects:(NSMutableArray*)movers
 {
 	CGRect myBoundingBox = [self adjustedBoundingBox];
-   	
-	for(MovingObject *object in movers){
-		if(CGRectIntersectsRect(myBoundingBox, object.adjustedBoundingBox))
-		{
-			NSLog(@"intersection");
-				if(characterState != kStateDead)
-				[self changeState:kStateDead];
-		}
-		else
-			[self changeState:kStateIdle];
+    if(characterState != kStateDead){
+	
+        for(MovingObject *object in movers){
+            if(CGRectIntersectsRect(myBoundingBox, object.adjustedBoundingBox))
+            {
+                [self changeState:kStateDead];
+                break;
+            }
+            else
+                [self changeState:kStateIdle];
 	}
+        
+    }
+
 }
 
 
 -(void)changeState:(CharacterStates)newState{
 
 	characterState = newState;
+    if(characterState == kStateDead)
+    
 	switch (newState) {
 		case kStateDead:
-				[self runAction:[CCRepeatForever actionWithAction:[CCRotateTo actionWithDuration:1 angle:720]]];
+          //  [[CCDirector sharedDirector]replaceScene:[GameOver scene]];
 			break;
 		case kStateIdle:
-				[self stopAllActions];
 			break;
 		default:
 			break;

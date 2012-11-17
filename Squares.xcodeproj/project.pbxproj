@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8959A516575B27002CE9B6 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8959A416575B27002CE9B6 /* GameOver.m */; };
 		0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7A1655F7DE0009AB13 /* Hero.m */; };
 		0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7D1655F8770009AB13 /* MovingObject.m */; };
+		0DD4CC87165753F70009AB13 /* Victory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC86165753F70009AB13 /* Victory.m */; };
 		0DFCF7B61627A1E4001CF3B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B51627A1E4001CF3B9 /* QuartzCore.framework */; };
 		0DFCF7B81627A1E4001CF3B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B71627A1E4001CF3B9 /* OpenGLES.framework */; };
 		0DFCF7BA1627A1E4001CF3B9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFCF7B91627A1E4001CF3B9 /* OpenAL.framework */; };
@@ -141,10 +143,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D8959A316575B27002CE9B6 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		0D8959A416575B27002CE9B6 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		0DD4CC791655F7DE0009AB13 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		0DD4CC7A1655F7DE0009AB13 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		0DD4CC7C1655F8770009AB13 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
 		0DD4CC7D1655F8770009AB13 /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
+		0DD4CC85165753F70009AB13 /* Victory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Victory.h; sourceTree = "<group>"; };
+		0DD4CC86165753F70009AB13 /* Victory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Victory.m; sourceTree = "<group>"; };
 		0DFCF7B11627A1E4001CF3B9 /* Squares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFCF7B51627A1E4001CF3B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0DFCF7B71627A1E4001CF3B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -449,6 +455,21 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		0DD4CC83165753670009AB13 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				0DFCF9421627A1E6001CF3B9 /* HelloWorldLayer.h */,
+				0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */,
+				0DFCF9451627A1E6001CF3B9 /* IntroLayer.h */,
+				0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */,
+				0DD4CC85165753F70009AB13 /* Victory.h */,
+				0DD4CC86165753F70009AB13 /* Victory.m */,
+				0D8959A316575B27002CE9B6 /* GameOver.h */,
+				0D8959A416575B27002CE9B6 /* GameOver.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
 		0DFCF7A61627A1E4001CF3B9 = {
 			isa = PBXGroup;
 			children = (
@@ -485,15 +506,12 @@
 		0DFCF7C71627A1E4001CF3B9 /* Squares */ = {
 			isa = PBXGroup;
 			children = (
+				0DD4CC83165753670009AB13 /* Layers */,
 				0DD4CC771655F7BD0009AB13 /* Objects */,
 				0DFCF94D1627A362001CF3B9 /* Grid.h */,
 				0DFCF94E1627A362001CF3B9 /* Grid.m */,
 				0DFCF93F1627A1E6001CF3B9 /* AppDelegate.h */,
 				0DFCF9401627A1E6001CF3B9 /* AppDelegate.m */,
-				0DFCF9421627A1E6001CF3B9 /* HelloWorldLayer.h */,
-				0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */,
-				0DFCF9451627A1E6001CF3B9 /* IntroLayer.h */,
-				0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */,
 				0DFCF7C81627A1E4001CF3B9 /* Resources */,
 				0DFCF7E21627A1E4001CF3B9 /* libs */,
 				0DFCF93B1627A1E6001CF3B9 /* Supporting Files */,
@@ -1055,6 +1073,8 @@
 				0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */,
 				0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */,
 				5AD36609165727C900A14599 /* GameObject.m in Sources */,
+				0DD4CC87165753F70009AB13 /* Victory.m in Sources */,
+				0D8959A516575B27002CE9B6 /* GameOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

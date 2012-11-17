@@ -7,7 +7,8 @@
 //
 
 #import "Grid.h"
-
+#import "Victory.h"
+#import "GameOver.h"
 @implementation Grid
 @synthesize  turtle;
 
@@ -28,8 +29,16 @@
 }
 - (void) update:(ccTime) time {
   
-	
-
+	if(turtle.position.x >= 460){
+        [[CCDirector sharedDirector] replaceScene:[Victory scene]];
+    }
+    
+    
+    if(turtle.characterState == kStateDead)
+    {   NSLog(@"dead");
+        [[CCDirector sharedDirector]replaceScene:[GameOver scene]];
+    }
+    
 	[turtle updateStateWithDeltaTime:time andListOfGameObjects:movers ];
 }
 

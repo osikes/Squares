@@ -13,6 +13,7 @@
 @interface Hero :GameObject
 {
     int count;
+    CharacterStates characterState;
 }
 -(id) initMy;
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime andListOfGameObjects:(NSMutableArray*)movers;
