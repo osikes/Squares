@@ -9,6 +9,7 @@
 #import "GameObject.h"
 
 @implementation GameObject
+@synthesize characterType;
 -(CGRect)adjustedBoundingBox{
 	CGRect currentBox = [self boundingBox];
 	return currentBox;

@@ -18,4 +18,14 @@ typedef enum
 	kStateMovingUp
 } CharacterStates;
 
+typedef  enum{
+			
+	herotype,
+	smallimmoble,
+	largeimmoble,
+	smallmoving,
+	largemoving,
+	smallmoving_horiztonal
+	
+}CharacterTypes;
 

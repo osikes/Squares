@@ -14,8 +14,9 @@
 
 @synthesize characterState;
 -(id) initMy{
-    if( self = [super initWithFile:@"turtle.png"] ){
+    if( self = [super initWithFile:@"smiley.png"] ){
         characterState = kStateIdle;
+			//[self runAction:[CCRepeatForever actionWithAction:[CCRotateTo actionWithDuration:1 angle:720]]];
     }
     return self;
 }
@@ -25,6 +26,7 @@
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime andListOfGameObjects:(NSMutableArray*)movers
 {
 	CGRect myBoundingBox = [self adjustedBoundingBox];
+	
     if(characterState != kStateDead){
 	
         for(MovingObject *object in movers){
@@ -36,9 +38,7 @@
             else
                 [self changeState:kStateIdle];
 	}
-        
     }
-
 }
 
 

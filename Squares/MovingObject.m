@@ -10,6 +10,7 @@
 
 @implementation MovingObject
 @synthesize down;
+@synthesize left;
 -(id) init{
     if( self = [super initWithFile:@"Icon-72.png"] ){
     }

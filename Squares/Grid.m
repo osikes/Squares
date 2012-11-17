@@ -45,20 +45,55 @@
 -(void)SetupGrid{
 	 CGSize winSize = [CCDirector sharedDirector].winSize;
 	movers = [[NSMutableArray alloc]init];
-	int j = 0;
-	for(int i = 2; i<5;i++){
-		j = i;
-		if(i%2 == 0) j = j*-1;
-		MovingObject *object = [[MovingObject alloc]init];
-		if(i >=4)
-			
-		object.position = ccp((winSize.width/2)+(i*50.0),(winSize.height/2));
-		else
-		object.position = ccp((winSize.width/2)+(i*50.0),(winSize.height/2)+(j*250));
-		[movers addObject:object ];
-		
-		[self addChild:object z:5 tag:i];
-	}
+	
+	
+	[self AddHorizontal:ccp(460,60):true];
+	
+	[self AddHorizontal:ccp(460,130):true];
+	
+	[self AddHorizontal:ccp(200,180):false];
+	
+	[self AddMovable:ccp(180,290):true];
+	
+	[self AddMovable:ccp(350,0):false];
+	
+	[self AddMovable:ccp(410,300):true];
+	
+		//add more immoble
+	[self AddImmoble:ccp(218,290)];
+	
+	[self AddImmoble:ccp(320,25)];
+}
+-(void)AddHorizontal:(CGPoint)point:(bool)left{
+	MovingObject *object = [[MovingObject alloc]init];
+	object.characterType = smallmoving_horiztonal;
+	object.left = left;
+	object.position = point;
+	
+	[movers addObject:object];
+	[self addChild:object z:5];
+}
+
+-(void)AddMovable:(CGPoint)point:(bool)down{
+	
+	MovingObject *object = [[MovingObject alloc]init];
+	object.characterType = smallmoving;
+	object.down = down;
+	object.position = point;
+	
+	[movers addObject:object];
+	[self addChild:object z:5];
+}
+
+-(void)AddImmoble:(CGPoint)point
+{
+	MovingObject *object = [[MovingObject alloc]init];
+	object.characterType = smallimmoble;
+	
+	object.position = point;
+	
+	[movers addObject:object];
+	[self addChild:object z:5];
 }
 
 // on "init" you need to initialize your instance
@@ -67,9 +102,10 @@
   
     if((self = [super init]))
     {
+		NSLog(@"init");
         CGSize winSize = [CCDirector sharedDirector].winSize;
         turtle = [[Hero alloc] initMy];
-        turtle.position = ccp(winSize.width/2, winSize.height/2);
+        turtle.position = ccp(50, winSize.height/2);
 		
 			//[sceneSpriteBatchNode addChild:turtle z:500 tag:123213];
 		[self addChild:turtle];
@@ -85,21 +121,46 @@
 -(void) MoveMover
 {
 	for(MovingObject *mover in movers){
-	float currentY = mover.position.y;
 	
-	if(currentY>= 280)
-		mover.down = true;
-	if(currentY<= 72)
-		mover.down = false;
-	
-	if(mover.down)
-		currentY = currentY-20;
-	else currentY = currentY+20;
-	
+		if(mover.characterType == smallmoving){
+			float currentY = mover.position.y;
+			
+			if(currentY>= 280)
+				mover.down = true;
+			if(currentY<= 20)
+				mover.down = false;
+			
+			if(mover.down)
+				currentY = currentY-20;
+			else currentY = currentY+20;
+			
+				
+			CCAction *action = [CCMoveTo actionWithDuration:.1 position: CGPointMake(mover.position.x, currentY)];
+				
+				[mover runAction:action];
 		
-	CCAction *action = [CCMoveTo actionWithDuration:.1 position: CGPointMake(mover.position.x, currentY)];
-		if(mover.tag < 4)
-		[mover runAction:action];
+		}
+		else if(mover.characterType == smallimmoble)
+		{}
+		else if(mover.characterType == smallmoving_horiztonal){
+			float currentX = mover.position.x
+			;
+			
+			if(currentX>= 460)
+				mover.left = true;
+			if(currentX<= 20)
+				mover.left= false;
+			
+			if(mover.left)
+				currentX = currentX-20;
+			else currentX = currentX+20;
+			
+			
+			CCAction *action = [CCMoveTo actionWithDuration:.1 position: CGPointMake(currentX,mover.position.y)];
+			
+			[mover runAction:action];
+	
+		}
 	}
 }
 
@@ -116,7 +177,8 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
-    return [self selectSpriteForTouch:touchLocation];
+		return [self selectSpriteForTouch:touchLocation];
+	
 }
 
 
@@ -135,7 +197,7 @@
     oldTouchLocation = [self convertToNodeSpace:oldTouchLocation];
     
     CGPoint translation = ccpSub(touchLocation, oldTouchLocation);
-    [self panForTranslation:translation];
+		 [self panForTranslation:translation];
 }
 
 

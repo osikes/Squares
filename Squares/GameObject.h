@@ -7,9 +7,13 @@
 //
 
 #import "CCSprite.h"
-
+#import "CommonProtocol.h"
 @interface GameObject : CCSprite
+{
+	CharacterTypes characterType;
+}
 
+@property (readwrite) CharacterTypes characterType;
 -(CGRect)adjustedBoundingBox;
 	
 	@end
