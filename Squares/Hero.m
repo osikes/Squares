@@ -9,8 +9,6 @@
 #import "Hero.h"
 #import "MovingObject.h"
 #import "cocos2d.h"
-#import "GameObject.h"
-#import "GameOver.h"
 #import "CommonProtocol.h"
 @implementation Hero
 

@@ -7,6 +7,7 @@
 //
 
 #import "Victory.h"
+#import "Grid.h"
 @implementation Victory
 +(CCScene *) scene
 {
@@ -35,6 +36,21 @@
     
     // add the label as a child to this Layer
     [self addChild: label];
+        CCMenuItem *restart = [CCMenuItemFont itemWithString:@"Play Again" block:^(id sender) {
+			
+            [[CCDirector sharedDirector] replaceScene:[Grid scene]];
+        }
+                               ];
+        
+		CCMenu *menu = [CCMenu menuWithItems:restart, nil];
+		
+		[menu alignItemsHorizontallyWithPadding:20];
+		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
+		
+		// Add the menu to the layer
+		[self addChild:menu];
+        
+
     }
     return self;
 }
