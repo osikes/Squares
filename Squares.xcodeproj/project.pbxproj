@@ -152,6 +152,7 @@
 /* Begin PBXFileReference section */
 		0D8959A316575B27002CE9B6 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		0D8959A416575B27002CE9B6 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		0D8959AF165880A4002CE9B6 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		0DD4CC791655F7DE0009AB13 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		0DD4CC7A1655F7DE0009AB13 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		0DD4CC7C1655F8770009AB13 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
@@ -535,6 +536,7 @@
 				0DFCF7C81627A1E4001CF3B9 /* Resources */,
 				0DFCF7E21627A1E4001CF3B9 /* libs */,
 				0DFCF93B1627A1E6001CF3B9 /* Supporting Files */,
+				0D8959AF165880A4002CE9B6 /* GameConfig.h */,
 			);
 			path = Squares;
 			sourceTree = "<group>";

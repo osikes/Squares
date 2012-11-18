@@ -5,17 +5,16 @@
 //  Created by Owen Sikes on 10/11/12.
 //
 //
-
+#import <Foundation/Foundation.h>
 #import "Grid.h"
 #import "Victory.h"
 #import "EndPoint.h"
 #import "PathPoint.h"
-
 #import "cocos2d.h"
 #import "GameOver.h"
 @implementation Grid
 @synthesize  turtle;
-
+@synthesize pathlines;
 @synthesize movers;
 @synthesize path;
 @synthesize startDate;
@@ -26,7 +25,6 @@
 	
 	// 'layer' is an autorelease object.
 	Grid *layer = [Grid node];
-	
 	
 	
 	// add layer as a child to scene
@@ -116,6 +114,41 @@
 	[self addChild:object z:5];
 }
 
+
+-(void)draw
+{
+    ccDrawColor4B(255, 255,255, 0
+                  );
+    glLineWidth(3.0);
+
+    if ([path count]>2) {
+        for(int i = 0;i<[path count];i+=2){
+            
+        if(i+2 <= [path count]){
+           
+             PathPoint *firstpoint = [path objectAtIndex:i];
+            
+            PathPoint *secondpoint = [path objectAtIndex:(i+1)];
+           
+            CGPoint originPoint = firstpoint.GetPoint;
+            CGPoint destinatonPoint = secondpoint.GetPoint;
+            ccDrawLine(originPoint, destinatonPoint);
+            NSLog(@"draw");
+            
+            }
+        }
+    }
+   /*     for(int i = 1;i<[path count]-1;i+=2){
+            PathPoint *firstpoint = [path objectAtIndex:i];
+            PathPoint *secondpiont = [path objectAtIndex:i+1];
+            CGPoint originPoint = firstpoint.GetPoint;
+            CGPoint destinatonPoint = secondpiont.GetPoint;
+            ccDrawLine(originPoint, destinatonPoint);
+        }
+    }
+   */
+}
+
 // on "init" you need to initialize your instance
 -(id) init
 {
@@ -127,7 +160,7 @@
 		CCSprite* background = [CCSprite spriteWithFile:@"lvl1.png"];
 		background.tag = 1;
 		background.anchorPoint = CGPointMake(0, 0);
-		[self addChild:background];
+		[self addChild:background z:-1];
         CGSize winSize = [CCDirector sharedDirector].winSize;
         turtle = [[Hero alloc] initMy];
         turtle.position = ccp(-50, winSize.height/2);
@@ -137,10 +170,7 @@
 		[self SetupGrid];
 		
 		
-		ccColor4B myColor = ccc4(255, 255, 255, 150);
 		
-		CCRibbon *ribbon = [CCRibbon ribbonWithWidth:10 image:@"green.png" length:10.0 color:myColor fade:0.7f];
-		[self addChild:ribbon z:8];
 		
         self.isTouchEnabled = true;
         [self scheduleUpdate];
@@ -206,7 +236,6 @@
 	{
 		pat_x1 = [point GetPoint].x;
 		pat_y1= [point GetPoint].y;
-		NSLog(@"%f time",point.time);
 		[moveActions addObject:[CCMoveTo actionWithDuration:point.time position:CGPointMake((float) pat_x1, (float) pat_y1)]];
 
 		

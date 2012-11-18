@@ -7,7 +7,7 @@
 //
 
 #import "cocos2d.h"
-
+#import "GameConfig.h"
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 #import "Grid.h"
@@ -75,7 +75,6 @@
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [Grid scene]];
 
-	
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
 	navController_.navigationBarHidden = YES;
