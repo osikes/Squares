@@ -142,6 +142,11 @@
 		5AD36609165727C900A14599 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36608165727C900A14599 /* GameObject.m */; };
 		5AD366191657F57400A14599 /* STVIWHITE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD366181657F57400A14599 /* STVIWHITE.jpg */; };
 		5AD3661B1658120700A14599 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3661A1658120700A14599 /* smiley.png */; };
+		5AD3661F1658362000A14599 /* lvl1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3661E1658362000A14599 /* lvl1.png */; };
+		5AD366211658386B00A14599 /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD366201658386B00A14599 /* touch.png */; };
+		5AD36627165846E900A14599 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD36626165846E900A14599 /* end.png */; };
+		5AD3662A1658473E00A14599 /* EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD366291658473D00A14599 /* EndPoint.m */; };
+		5AD3662D1658681800A14599 /* PathPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3662C1658681700A14599 /* PathPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -423,6 +428,13 @@
 		5AD3660C16572DB600A14599 /* CommonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonProtocol.h; sourceTree = "<group>"; };
 		5AD366181657F57400A14599 /* STVIWHITE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = STVIWHITE.jpg; sourceTree = "<group>"; };
 		5AD3661A1658120700A14599 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
+		5AD3661E1658362000A14599 /* lvl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvl1.png; sourceTree = "<group>"; };
+		5AD366201658386B00A14599 /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touch.png; sourceTree = "<group>"; };
+		5AD36626165846E900A14599 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
+		5AD366281658473D00A14599 /* EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndPoint.h; sourceTree = "<group>"; };
+		5AD366291658473D00A14599 /* EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndPoint.m; sourceTree = "<group>"; };
+		5AD3662B1658681700A14599 /* PathPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathPoint.h; sourceTree = "<group>"; };
+		5AD3662C1658681700A14599 /* PathPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +467,10 @@
 				0DD4CC7D1655F8770009AB13 /* MovingObject.m */,
 				5AD36607165727C900A14599 /* GameObject.h */,
 				5AD36608165727C900A14599 /* GameObject.m */,
+				5AD366281658473D00A14599 /* EndPoint.h */,
+				5AD366291658473D00A14599 /* EndPoint.m */,
+				5AD3662B1658681700A14599 /* PathPoint.h */,
+				5AD3662C1658681700A14599 /* PathPoint.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -526,6 +542,9 @@
 		0DFCF7C81627A1E4001CF3B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AD366201658386B00A14599 /* touch.png */,
+				5AD36626165846E900A14599 /* end.png */,
+				5AD3661E1658362000A14599 /* lvl1.png */,
 				5AD3661A1658120700A14599 /* smiley.png */,
 				5AD366181657F57400A14599 /* STVIWHITE.jpg */,
 				0DFCF9501627AA3B001CF3B9 /* turtle.png */,
@@ -963,6 +982,9 @@
 				0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */,
 				5AD366191657F57400A14599 /* STVIWHITE.jpg in Resources */,
 				5AD3661B1658120700A14599 /* smiley.png in Resources */,
+				5AD3661F1658362000A14599 /* lvl1.png in Resources */,
+				5AD366211658386B00A14599 /* touch.png in Resources */,
+				5AD36627165846E900A14599 /* end.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,6 +1105,8 @@
 				5AD36609165727C900A14599 /* GameObject.m in Sources */,
 				0DD4CC87165753F70009AB13 /* Victory.m in Sources */,
 				0D8959A516575B27002CE9B6 /* GameOver.m in Sources */,
+				5AD3662A1658473E00A14599 /* EndPoint.m in Sources */,
+				5AD3662D1658681800A14599 /* PathPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,12 +15,14 @@ typedef enum
     kStateDead,
 	kStateIdle,
 	kStateMovingDown,
-	kStateMovingUp
+	kStateMovingUp,
+	kStateVictory
 } CharacterStates;
 
 typedef  enum{
 			
 	herotype,
+	endtype,
 	smallimmoble,
 	largeimmoble,
 	smallmoving,

@@ -14,10 +14,12 @@
 {
 
 CCSpriteBatchNode *sceneSpriteBatchNode;
+	NSDate *startDate;
 }
 +(CCScene *) scene;
-
+@property (nonatomic, copy) NSDate *startDate;
 @property  Hero *turtle;
 -(void) MoveMover;
 @property NSMutableArray *movers;
+@property NSMutableArray *path;
 @end

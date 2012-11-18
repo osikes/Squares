@@ -14,7 +14,7 @@
 
 @synthesize characterState;
 -(id) initMy{
-    if( self = [super initWithFile:@"smiley.png"] ){
+    if( self = [super initWithFile:@"touch.png"] ){
         characterState = kStateIdle;
 			//[self runAction:[CCRepeatForever actionWithAction:[CCRotateTo actionWithDuration:1 angle:720]]];
     }
@@ -27,12 +27,19 @@
 {
 	CGRect myBoundingBox = [self adjustedBoundingBox];
 	
-    if(characterState != kStateDead){
+    if((characterState != kStateDead )&& ([self position].x >60) && (characterState != kStateVictory)){
 	
         for(MovingObject *object in movers){
             if(CGRectIntersectsRect(myBoundingBox, object.adjustedBoundingBox))
             {
-                [self changeState:kStateDead];
+				if(object.characterType == endtype)
+				{
+					[self changeState:kStateVictory];
+					NSLog(@"Victory");
+					break;
+				}
+				else
+					[self changeState:kStateDead];
                 break;
             }
             else
@@ -45,13 +52,15 @@
 -(void)changeState:(CharacterStates)newState{
 
 	characterState = newState;
-    if(characterState == kStateDead)
+    
     
 	switch (newState) {
 		case kStateDead:
           //  [[CCDirector sharedDirector]replaceScene:[GameOver scene]];
 			break;
 		case kStateIdle:
+			break;
+		case kStateVictory:
 			break;
 		default:
 			break;
