@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "Hero.h"
 #import "MovingObject.h"
-@interface Grid : CCLayer
+@interface MainLayerLvl1 : CCLayer
 {
 
 CCSpriteBatchNode *sceneSpriteBatchNode;

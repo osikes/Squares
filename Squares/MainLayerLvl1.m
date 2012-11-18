@@ -6,14 +6,14 @@
 //
 //
 #import <Foundation/Foundation.h>
-#import "Grid.h"
+#import "MainLayerLvl1.h"
 #import "Victory.h"
 #import "EndPoint.h"
 #import "PathPoint.h"
 #import "cocos2d.h"
 #import "GameOver.h"
 #import "BackGroundLvl1.h"
-@implementation Grid
+@implementation MainLayerLvl1
 @synthesize  turtle;
 @synthesize pathlines;
 @synthesize movers;
@@ -102,10 +102,11 @@
 
 -(void)draw
 {
-	ccDrawColor4B(255, 100,200, 0);
+	[super draw];
+glColor4ub(255,0,255,255);
 	
 		// draw line from a vector to other vector.
-    glLineWidth(3.0);
+    glLineWidth(8.0);
     if ([path count]>2) {
         for(int i = 0;i<[path count];i+=2){
             
@@ -122,17 +123,8 @@
             }
         }
     }
-   /*     for(int i = 1;i<[path count]-1;i+=2){
-            PathPoint *firstpoint = [path objectAtIndex:i];
-            PathPoint *secondpiont = [path objectAtIndex:i+1];
-            CGPoint originPoint = firstpoint.GetPoint;
-            CGPoint destinatonPoint = secondpiont.GetPoint;
-            ccDrawLine(originPoint, destinatonPoint);
-        }
-    }
-   */
-	
-    [super draw];
+  
+		//[super draw];
 }
 
 // on "init" you need to initialize your instance

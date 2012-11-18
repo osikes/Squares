@@ -13,12 +13,12 @@
 -(id)init{
 	
 	if((self = [super init])){
-		self.zOrder = -1000;
-	CCSprite* background = [CCSprite spriteWithFile:@"lvl1.png"];
-		background.anchorPoint = CGPointMake(0, 0);
-		background.zOrder = -201;
+	
+		CCSprite* background = [CCSprite spriteWithFile:@"lvl1.png"];
 		
-			[self addChild:background z:-1000];
+		background.anchorPoint = CGPointMake(0, 0);
+		
+		[self addChild:background];
 	}
 	return self;
 }

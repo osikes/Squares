@@ -7,7 +7,7 @@
 //
 
 #import "GameOver.h"
-#import "Grid.h"
+#import "MainLayerLvl1.h"
 #import "Level1.h"
 @implementation GameOver
 +(CCScene *) scene

@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 #import "Level1.h"
-#import "Grid.h"
+#import "MainLayerLvl1.h"
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;

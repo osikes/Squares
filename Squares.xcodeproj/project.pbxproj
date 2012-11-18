@@ -137,7 +137,7 @@
 		0DFCF9411627A1E6001CF3B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9401627A1E6001CF3B9 /* AppDelegate.m */; };
 		0DFCF9441627A1E6001CF3B9 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */; };
 		0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */; };
-		0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF94E1627A362001CF3B9 /* Grid.m */; };
+		0DFCF94F1627A362001CF3B9 /* MainLayerLvl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF94E1627A362001CF3B9 /* MainLayerLvl1.m */; };
 		0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFCF9501627AA3B001CF3B9 /* turtle.png */; };
 		5AD36609165727C900A14599 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36608165727C900A14599 /* GameObject.m */; };
 		5AD366191657F57400A14599 /* STVIWHITE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD366181657F57400A14599 /* STVIWHITE.jpg */; };
@@ -423,8 +423,8 @@
 		0DFCF9431627A1E6001CF3B9 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		0DFCF9451627A1E6001CF3B9 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		0DFCF94D1627A362001CF3B9 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
-		0DFCF94E1627A362001CF3B9 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		0DFCF94D1627A362001CF3B9 /* MainLayerLvl1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayerLvl1.h; sourceTree = "<group>"; };
+		0DFCF94E1627A362001CF3B9 /* MainLayerLvl1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayerLvl1.m; sourceTree = "<group>"; };
 		0DFCF9501627AA3B001CF3B9 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
 		5AD36607165727C900A14599 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		5AD36608165727C900A14599 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
@@ -944,8 +944,8 @@
 		5AD3663F1658BD0900A14599 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				0DFCF94D1627A362001CF3B9 /* Grid.h */,
-				0DFCF94E1627A362001CF3B9 /* Grid.m */,
+				0DFCF94D1627A362001CF3B9 /* MainLayerLvl1.h */,
+				0DFCF94E1627A362001CF3B9 /* MainLayerLvl1.m */,
 				5AD366361658B75700A14599 /* BackGroundLvl1.h */,
 				5AD366371658B75700A14599 /* BackGroundLvl1.m */,
 			);
@@ -1135,7 +1135,7 @@
 				0DFCF9411627A1E6001CF3B9 /* AppDelegate.m in Sources */,
 				0DFCF9441627A1E6001CF3B9 /* HelloWorldLayer.m in Sources */,
 				0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */,
-				0DFCF94F1627A362001CF3B9 /* Grid.m in Sources */,
+				0DFCF94F1627A362001CF3B9 /* MainLayerLvl1.m in Sources */,
 				0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */,
 				0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */,
 				5AD36609165727C900A14599 /* GameObject.m in Sources */,

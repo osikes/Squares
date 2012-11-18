@@ -8,7 +8,7 @@
 
 #import "Victory.h"
 #import "Level1.h"
-#import "Grid.h"
+#import "MainLayerLvl1.h"
 @implementation Victory
 +(CCScene *) scene
 {
