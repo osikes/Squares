@@ -147,6 +147,8 @@
 		5AD36627165846E900A14599 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD36626165846E900A14599 /* end.png */; };
 		5AD3662A1658473E00A14599 /* EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD366291658473D00A14599 /* EndPoint.m */; };
 		5AD3662D1658681800A14599 /* PathPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3662C1658681700A14599 /* PathPoint.m */; };
+		5AD366381658B75700A14599 /* BackGroundLvl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD366371658B75700A14599 /* BackGroundLvl1.m */; };
+		5AD3663D1658B9E000A14599 /* Level1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3663C1658B9E000A14599 /* Level1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -436,6 +438,10 @@
 		5AD366291658473D00A14599 /* EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndPoint.m; sourceTree = "<group>"; };
 		5AD3662B1658681700A14599 /* PathPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathPoint.h; sourceTree = "<group>"; };
 		5AD3662C1658681700A14599 /* PathPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathPoint.m; sourceTree = "<group>"; };
+		5AD366361658B75700A14599 /* BackGroundLvl1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackGroundLvl1.h; sourceTree = "<group>"; };
+		5AD366371658B75700A14599 /* BackGroundLvl1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackGroundLvl1.m; sourceTree = "<group>"; };
+		5AD3663B1658B9E000A14599 /* Level1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1.h; sourceTree = "<group>"; };
+		5AD3663C1658B9E000A14599 /* Level1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,10 +533,9 @@
 		0DFCF7C71627A1E4001CF3B9 /* Squares */ = {
 			isa = PBXGroup;
 			children = (
+				5AD3663A1658B9CB00A14599 /* Scenes */,
 				0DD4CC83165753670009AB13 /* Layers */,
 				0DD4CC771655F7BD0009AB13 /* Objects */,
-				0DFCF94D1627A362001CF3B9 /* Grid.h */,
-				0DFCF94E1627A362001CF3B9 /* Grid.m */,
 				0DFCF93F1627A1E6001CF3B9 /* AppDelegate.h */,
 				0DFCF9401627A1E6001CF3B9 /* AppDelegate.m */,
 				0DFCF7C81627A1E4001CF3B9 /* Resources */,
@@ -918,6 +923,35 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		5AD3663A1658B9CB00A14599 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3663E1658BCF800A14599 /* Scene1 */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		5AD3663E1658BCF800A14599 /* Scene1 */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3663F1658BD0900A14599 /* Layers */,
+				5AD3663B1658B9E000A14599 /* Level1.h */,
+				5AD3663C1658B9E000A14599 /* Level1.m */,
+			);
+			name = Scene1;
+			sourceTree = "<group>";
+		};
+		5AD3663F1658BD0900A14599 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				0DFCF94D1627A362001CF3B9 /* Grid.h */,
+				0DFCF94E1627A362001CF3B9 /* Grid.m */,
+				5AD366361658B75700A14599 /* BackGroundLvl1.h */,
+				5AD366371658B75700A14599 /* BackGroundLvl1.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1109,6 +1143,8 @@
 				0D8959A516575B27002CE9B6 /* GameOver.m in Sources */,
 				5AD3662A1658473E00A14599 /* EndPoint.m in Sources */,
 				5AD3662D1658681800A14599 /* PathPoint.m in Sources */,
+				5AD366381658B75700A14599 /* BackGroundLvl1.m in Sources */,
+				5AD3663D1658B9E000A14599 /* Level1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

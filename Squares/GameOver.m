@@ -8,7 +8,7 @@
 
 #import "GameOver.h"
 #import "Grid.h"
-
+#import "Level1.h"
 @implementation GameOver
 +(CCScene *) scene
 {
@@ -41,7 +41,9 @@
         // Achievement Menu Item using blocks
 		CCMenuItem *restart = [CCMenuItemFont itemWithString:@"Try Again" block:^(id sender) {
 			
-            [[CCDirector sharedDirector] replaceScene:[Grid scene]];
+		
+	Level1 *scene = [[Level1 alloc]init];
+            [[CCDirector sharedDirector] replaceScene:scene];
 				}
 									   ];
 	

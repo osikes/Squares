@@ -7,6 +7,7 @@
 //
 
 #import "Victory.h"
+#import "Level1.h"
 #import "Grid.h"
 @implementation Victory
 +(CCScene *) scene
@@ -38,7 +39,8 @@
     [self addChild: label];
         CCMenuItem *restart = [CCMenuItemFont itemWithString:@"Play Again" block:^(id sender) {
 			
-            [[CCDirector sharedDirector] replaceScene:[Grid scene]];
+          Level1 *scene = [[Level1 alloc]init];
+            [[CCDirector sharedDirector] replaceScene:scene];
         }
                                ];
         

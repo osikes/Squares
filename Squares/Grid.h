@@ -18,7 +18,6 @@ CCSpriteBatchNode *sceneSpriteBatchNode;
 }
 
 
-+(CCScene *) scene;
 @property (nonatomic, copy) NSDate *startDate;
 @property  Hero *turtle;
 -(void) MoveMover;

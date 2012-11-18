@@ -12,27 +12,14 @@
 #import "PathPoint.h"
 #import "cocos2d.h"
 #import "GameOver.h"
+#import "BackGroundLvl1.h"
 @implementation Grid
 @synthesize  turtle;
 @synthesize pathlines;
 @synthesize movers;
 @synthesize path;
 @synthesize startDate;
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	Grid *layer = [Grid node];
-	
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
 
-	// return the scene
-	return scene;
-}
 - (void) update:(ccTime) time {
   
 	
@@ -42,31 +29,29 @@
         [[CCDirector sharedDirector] replaceScene:[Victory scene]];
     }
     
-    
     if(turtle.characterState == kStateDead)
     {   
         [[CCDirector sharedDirector]replaceScene:[GameOver scene]];
     }
-    
 	}
 
 -(void)SetupGrid{
 	 CGSize winSize = [CCDirector sharedDirector].winSize;
 	movers = [[NSMutableArray alloc]init];
 	
-	//[self AddHorizontal:ccp(460,60):true];
+	[self AddHorizontal:ccp(460,60):true];
 	
 		//	[self AddHorizontal:ccp(460,130):true];
 	
-		//[self AddHorizontal:ccp(200,180):false];
+		[self AddHorizontal:ccp(200,180):false];
 	
-	[self AddMovable:ccp(180,290):true];
+		//[self AddMovable:ccp(180,290):true];
 	
-		//[self AddMovable:ccp(350,0):false];
+		[self AddMovable:ccp(350,0):false];
 	
-	[self AddMovable:ccp(410,300):true];
+		//[self AddMovable:ccp(410,300):true];
 	
-		//	[self AddImmoble:ccp(218,290)];
+			[self AddImmoble:ccp(218,290)];
 	
 	 	[self AddImmoble:ccp(320,25)];
 
@@ -117,10 +102,10 @@
 
 -(void)draw
 {
-    ccDrawColor4B(255, 255,255, 0
-                  );
+	ccDrawColor4B(255, 100,200, 0);
+	
+		// draw line from a vector to other vector.
     glLineWidth(3.0);
-
     if ([path count]>2) {
         for(int i = 0;i<[path count];i+=2){
             
@@ -133,7 +118,6 @@
             CGPoint originPoint = firstpoint.GetPoint;
             CGPoint destinatonPoint = secondpoint.GetPoint;
             ccDrawLine(originPoint, destinatonPoint);
-            NSLog(@"draw");
             
             }
         }
@@ -147,6 +131,8 @@
         }
     }
    */
+	
+    [super draw];
 }
 
 // on "init" you need to initialize your instance
@@ -157,10 +143,7 @@
 		
     {
 		path = [[NSMutableArray alloc]init];
-		CCSprite* background = [CCSprite spriteWithFile:@"lvl1.png"];
-		background.tag = 1;
-		background.anchorPoint = CGPointMake(0, 0);
-		[self addChild:background z:-1];
+			
         CGSize winSize = [CCDirector sharedDirector].winSize;
         turtle = [[Hero alloc] initMy];
         turtle.position = ccp(-50, winSize.height/2);
@@ -176,6 +159,7 @@
         [self scheduleUpdate];
 		[self schedule:@selector(MoveMover) interval:.1];
 			//[self addChild:sceneSpriteBatchNode z:0];
+			
     }
     return self;
 }

@@ -10,6 +10,7 @@
 #import "GameConfig.h"
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "Level1.h"
 #import "Grid.h"
 @implementation AppController
 
@@ -73,7 +74,8 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [Grid scene]];
+	Level1 *scene = [[Level1 alloc]init];
+	[director_ pushScene: scene];
 
 	// Create a Navigation Controller with the Director
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
