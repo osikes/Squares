@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D8959A516575B27002CE9B6 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8959A416575B27002CE9B6 /* GameOver.m */; };
+		0D8959B7165B3894002CE9B6 /* StartPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8959B6165B3894002CE9B6 /* StartPoint.m */; };
 		0DD4CC7B1655F7DE0009AB13 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7A1655F7DE0009AB13 /* Hero.m */; };
 		0DD4CC7E1655F8770009AB13 /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC7D1655F8770009AB13 /* MovingObject.m */; };
 		0DD4CC87165753F70009AB13 /* Victory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD4CC86165753F70009AB13 /* Victory.m */; };
@@ -160,6 +161,8 @@
 		0D8959A316575B27002CE9B6 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		0D8959A416575B27002CE9B6 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		0D8959AF165880A4002CE9B6 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		0D8959B5165B3894002CE9B6 /* StartPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPoint.h; sourceTree = "<group>"; };
+		0D8959B6165B3894002CE9B6 /* StartPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPoint.m; sourceTree = "<group>"; };
 		0DD4CC791655F7DE0009AB13 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		0DD4CC7A1655F7DE0009AB13 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		0DD4CC7C1655F8770009AB13 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
@@ -495,6 +498,8 @@
 				5AD3662C1658681700A14599 /* PathPoint.m */,
 				5AB53D67165AF781004F1188 /* GameScore.h */,
 				5AB53D68165AF781004F1188 /* GameScore.m */,
+				0D8959B5165B3894002CE9B6 /* StartPoint.h */,
+				0D8959B6165B3894002CE9B6 /* StartPoint.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1207,6 +1212,7 @@
 				5AB53D72165B1C60004F1188 /* GameLayerLevl2.m in Sources */,
 				5AB53D76165B1E75004F1188 /* BaseLayer.m in Sources */,
 				5AB53D7A165B224B004F1188 /* MainMenu.m in Sources */,
+				0D8959B7165B3894002CE9B6 /* StartPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

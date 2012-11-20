@@ -48,14 +48,12 @@
             [[CCDirector sharedDirector] replaceScene:scene];
         }
 						 ];
-        
 		
 		CCMenu *menu = [CCMenu menuWithItems:level1,level2, nil];
 		
 		[menu alignItemsHorizontallyWithPadding:20];
 		[menu setPosition:ccp( size.width/2, size.height/2 - 50)];
 		
-			// Add the menu to the layer
 		[self addChild:menu];
 	}
 	

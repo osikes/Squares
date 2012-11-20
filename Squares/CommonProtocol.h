@@ -22,9 +22,10 @@ typedef enum
 typedef  enum{
 			
 	herotype,
-	endtype,
+	endzone,
 	smallimmoble,
 	largeimmoble,
+    starttzone,
 	smallmoving,
 	largemoving,
 	smallmoving_horiztonal

@@ -24,6 +24,7 @@ NSMutableArray *pathlines;
 GameScore *Score;
 }
 
+
 @property (nonatomic, copy) NSDate *startDate;
 @property  (nonatomic,copy) Hero *hero;
 
@@ -34,6 +35,17 @@ GameScore *Score;
 @property (nonatomic,copy) NSMutableArray *pathlines;
 
 @property (assign) GameScore *Score;
+
+
+
+
+-(void)SetupGrid;
+-(void)PlaceScore:(CGPoint)point;
+-(void)PlaceEndEntity:(CGPoint)point;
+-(void)AddHorizontal:(CGPoint)point:(bool)left;
+-(void)AddMovable:(CGPoint)point:(bool)down;
+-(void)AddImmoble:(CGPoint)point;
+
 
 
 

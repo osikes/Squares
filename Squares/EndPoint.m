@@ -11,7 +11,7 @@
 @implementation EndPoint
 -(id) init{
     if( self = [super initWithFile:@"end.png"] ){
-		characterType = endtype;
+		characterType = endzone;
     }
     return self;
 }

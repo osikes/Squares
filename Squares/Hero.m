@@ -32,7 +32,7 @@
         for(MovingObject *object in movers){
             if(CGRectIntersectsRect(myBoundingBox, object.adjustedBoundingBox))
             {
-				if(object.characterType == endtype)
+				if(object.characterType == endzone)
 				{
 					[self changeState:kStateVictory];
 					NSLog(@"Victory");
