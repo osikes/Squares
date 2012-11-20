@@ -8,20 +8,11 @@
 
 #import "CCLayer.h"
 #import "cocos2d.h"
-#import "Hero.h"
-#import "MovingObject.h"
-@interface MainLayerLvl1 : CCLayer
-{
-
-CCSpriteBatchNode *sceneSpriteBatchNode;
-	NSDate *startDate;
-}
+#import "BaseLayer.h"
+@interface MainLayerLvl1 :BaseLayer
 
 
-@property (nonatomic, copy) NSDate *startDate;
-@property  Hero *turtle;
+
 -(void) MoveMover;
-@property NSMutableArray *movers;
-@property NSMutableArray *path;
-@property NSMutableArray *pathlines;
+
 @end

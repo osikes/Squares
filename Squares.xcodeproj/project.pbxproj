@@ -139,6 +139,11 @@
 		0DFCF9471627A1E6001CF3B9 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF9461627A1E6001CF3B9 /* IntroLayer.m */; };
 		0DFCF94F1627A362001CF3B9 /* MainLayerLvl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCF94E1627A362001CF3B9 /* MainLayerLvl1.m */; };
 		0DFCF9511627AA3B001CF3B9 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFCF9501627AA3B001CF3B9 /* turtle.png */; };
+		5AB53D69165AF781004F1188 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB53D68165AF781004F1188 /* GameScore.m */; };
+		5AB53D6F165B1C18004F1188 /* Level2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB53D6E165B1C18004F1188 /* Level2.m */; };
+		5AB53D72165B1C60004F1188 /* GameLayerLevl2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB53D71165B1C60004F1188 /* GameLayerLevl2.m */; };
+		5AB53D76165B1E75004F1188 /* BaseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB53D75165B1E75004F1188 /* BaseLayer.m */; };
+		5AB53D7A165B224B004F1188 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB53D79165B224B004F1188 /* MainMenu.m */; };
 		5AD36609165727C900A14599 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36608165727C900A14599 /* GameObject.m */; };
 		5AD366191657F57400A14599 /* STVIWHITE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD366181657F57400A14599 /* STVIWHITE.jpg */; };
 		5AD3661B1658120700A14599 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3661A1658120700A14599 /* smiley.png */; };
@@ -426,6 +431,16 @@
 		0DFCF94D1627A362001CF3B9 /* MainLayerLvl1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayerLvl1.h; sourceTree = "<group>"; };
 		0DFCF94E1627A362001CF3B9 /* MainLayerLvl1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayerLvl1.m; sourceTree = "<group>"; };
 		0DFCF9501627AA3B001CF3B9 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
+		5AB53D67165AF781004F1188 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		5AB53D68165AF781004F1188 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
+		5AB53D6D165B1C18004F1188 /* Level2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level2.h; sourceTree = "<group>"; };
+		5AB53D6E165B1C18004F1188 /* Level2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level2.m; sourceTree = "<group>"; };
+		5AB53D70165B1C60004F1188 /* GameLayerLevl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayerLevl2.h; sourceTree = "<group>"; };
+		5AB53D71165B1C60004F1188 /* GameLayerLevl2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLayerLevl2.m; sourceTree = "<group>"; };
+		5AB53D74165B1E75004F1188 /* BaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLayer.h; sourceTree = "<group>"; };
+		5AB53D75165B1E75004F1188 /* BaseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLayer.m; sourceTree = "<group>"; };
+		5AB53D78165B224B004F1188 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		5AB53D79165B224B004F1188 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		5AD36607165727C900A14599 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		5AD36608165727C900A14599 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		5AD3660C16572DB600A14599 /* CommonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonProtocol.h; sourceTree = "<group>"; };
@@ -478,6 +493,8 @@
 				5AD366291658473D00A14599 /* EndPoint.m */,
 				5AD3662B1658681700A14599 /* PathPoint.h */,
 				5AD3662C1658681700A14599 /* PathPoint.m */,
+				5AB53D67165AF781004F1188 /* GameScore.h */,
+				5AB53D68165AF781004F1188 /* GameScore.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -915,6 +932,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5AB53D6B165B1BF3004F1188 /* Scene2 */ = {
+			isa = PBXGroup;
+			children = (
+				5AB53D6C165B1C05004F1188 /* Layers */,
+				5AB53D6D165B1C18004F1188 /* Level2.h */,
+				5AB53D6E165B1C18004F1188 /* Level2.m */,
+			);
+			name = Scene2;
+			sourceTree = "<group>";
+		};
+		5AB53D6C165B1C05004F1188 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				5AB53D70165B1C60004F1188 /* GameLayerLevl2.h */,
+				5AB53D71165B1C60004F1188 /* GameLayerLevl2.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		5AB53D73165B1E59004F1188 /* Base_Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5AB53D74165B1E75004F1188 /* BaseLayer.h */,
+				5AB53D75165B1E75004F1188 /* BaseLayer.m */,
+			);
+			name = Base_Layer;
+			sourceTree = "<group>";
+		};
+		5AB53D77165B2234004F1188 /* Main_Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5AB53D78165B224B004F1188 /* MainMenu.h */,
+				5AB53D79165B224B004F1188 /* MainMenu.m */,
+			);
+			name = Main_Menu;
+			sourceTree = "<group>";
+		};
 		5AD3660B16572D9B00A14599 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,7 +980,10 @@
 		5AD3663A1658B9CB00A14599 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5AB53D77165B2234004F1188 /* Main_Menu */,
+				5AB53D73165B1E59004F1188 /* Base_Layer */,
 				5AD3663E1658BCF800A14599 /* Scene1 */,
+				5AB53D6B165B1BF3004F1188 /* Scene2 */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1145,6 +1202,11 @@
 				5AD3662D1658681800A14599 /* PathPoint.m in Sources */,
 				5AD366381658B75700A14599 /* BackGroundLvl1.m in Sources */,
 				5AD3663D1658B9E000A14599 /* Level1.m in Sources */,
+				5AB53D69165AF781004F1188 /* GameScore.m in Sources */,
+				5AB53D6F165B1C18004F1188 /* Level2.m in Sources */,
+				5AB53D72165B1C60004F1188 /* GameLayerLevl2.m in Sources */,
+				5AB53D76165B1E75004F1188 /* BaseLayer.m in Sources */,
+				5AB53D7A165B224B004F1188 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

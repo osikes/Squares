@@ -10,8 +10,7 @@
 #import "GameConfig.h"
 #import "AppDelegate.h"
 #import "IntroLayer.h"
-#import "Level1.h"
-#import "MainLayerLvl1.h"
+#import "MainMenu.h"
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
@@ -74,7 +73,8 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	Level1 *scene = [[Level1 alloc]init];
+	MainMenu *scene = [MainMenu node];
+	
 	[director_ pushScene: scene];
 
 	// Create a Navigation Controller with the Director

@@ -11,58 +11,99 @@
 #import "EndPoint.h"
 #import "PathPoint.h"
 #import "cocos2d.h"
+#include <stdlib.h>
 #import "GameOver.h"
+#import "GameScore.h"
 #import "BackGroundLvl1.h"
+#import "EndPoint.h"
+
+
 @implementation MainLayerLvl1
-@synthesize  turtle;
-@synthesize pathlines;
-@synthesize movers;
-@synthesize path;
-@synthesize startDate;
+
+
 
 - (void) update:(ccTime) time {
   
 	
-[turtle updateStateWithDeltaTime:time andListOfGameObjects:movers ];
-	if(turtle.characterState == kStateVictory){
+[hero updateStateWithDeltaTime:time andListOfGameObjects:sprite_objects ];
+	if(hero.characterState == kStateVictory){
 		
         [[CCDirector sharedDirector] replaceScene:[Victory scene]];
     }
     
-    if(turtle.characterState == kStateDead)
+    if(hero.characterState == kStateDead)
     {   
         [[CCDirector sharedDirector]replaceScene:[GameOver scene]];
     }
 	}
 
 -(void)SetupGrid{
-	 CGSize winSize = [CCDirector sharedDirector].winSize;
-	movers = [[NSMutableArray alloc]init];
+	sprite_objects = [[NSMutableArray alloc]init];
 	
-	[self AddHorizontal:ccp(460,60):true];
+		//[self AddHorizontal:ccp(460,60):true];
 	
 		//	[self AddHorizontal:ccp(460,130):true];
 	
-		[self AddHorizontal:ccp(200,180):false];
+		//[self AddHorizontal:ccp(200,180):false];
 	
 		//[self AddMovable:ccp(180,290):true];
 	
-		[self AddMovable:ccp(350,0):false];
+		//[self AddMovable:ccp(350,0):false];
 	
 		//[self AddMovable:ccp(410,300):true];
-	
-			[self AddImmoble:ccp(218,290)];
-	
-	 	[self AddImmoble:ccp(320,25)];
-
 	[self PlaceEndEntity:ccp(455,180)];
+	for(int i = 0;i< 8;i++) {
+		int x = arc4random()%480;
+		int y = arc4random()%320;
+		
+		if(x < 80)
+			x = x+(80-x);
+		
+		while([self Intersects:ccp(x,y)])
+		{
+			x = arc4random()%480;
+			y = arc4random()%320;
+			if(x < 80)
+			x = x+(80-x);
+			
+		}
+		[self AddImmoble:ccp(x,y)];
+	}
+	
+		//	 	[self AddImmoble:ccp(320,25)];
+
+		
+	
+}
+
+-(bool)Intersects:(CGPoint) point{
+	
+		MovingObject *object = [[MovingObject alloc]init];
+		object.position = point;
+	CGRect currentBox = [end boundingBox ];
+	
+	 if(CGRectIntersectsRect(currentBox	, object.adjustedBoundingBox))
+	 {
+		 return true;
+	 }
+	return false;
 }
 
 
+-(void)PlaceScore{
+    
+	Score = [[GameScore alloc]init];
+    // position the label on the center of the screen
+		//label.anchorPoint = CGPointMake(200, 100);
+	[Score scorelbl].position = ccp(455,290);
+	[self addChild:[Score scorelbl]z:6];
+	
+	
+}
 -(void)PlaceEndEntity:(CGPoint)point{
-	EndPoint *end = [[EndPoint alloc]init];
+	 end = [[EndPoint alloc]init];
 	end.position = point;
-	[movers addObject:end];
+	[sprite_objects addObject:end];
 	[self addChild:end];
 	
 }
@@ -73,7 +114,7 @@
 	object.left = left;
 	object.position = point;
 	
-	[movers addObject:object];
+	[sprite_objects addObject:object];
 	[self addChild:object z:5];
 }
 
@@ -84,7 +125,7 @@
 	object.down = down;
 	object.position = point;
 	
-	[movers addObject:object];
+	[sprite_objects addObject:object];
 	[self addChild:object z:5];
 }
 
@@ -95,7 +136,7 @@
 	
 	object.position = point;
 	
-	[movers addObject:object];
+	[sprite_objects addObject:object];
 	[self addChild:object z:5];
 }
 
@@ -103,7 +144,7 @@
 -(void)draw
 {
 	[super draw];
-glColor4ub(255,0,255,255);
+	glColor4ub(255,0,255,255);
 	
 		// draw line from a vector to other vector.
     glLineWidth(8.0);
@@ -119,12 +160,16 @@ glColor4ub(255,0,255,255);
             CGPoint originPoint = firstpoint.GetPoint;
             CGPoint destinatonPoint = secondpoint.GetPoint;
             ccDrawLine(originPoint, destinatonPoint);
+			
+			
+		if(i >= Score.Score)
+			[Score updateValue:i];
+			
             
             }
         }
     }
   
-		//[super draw];
 }
 
 // on "init" you need to initialize your instance
@@ -137,11 +182,11 @@ glColor4ub(255,0,255,255);
 		path = [[NSMutableArray alloc]init];
 			
         CGSize winSize = [CCDirector sharedDirector].winSize;
-        turtle = [[Hero alloc] initMy];
-        turtle.position = ccp(-50, winSize.height/2);
+        hero = [[Hero alloc] initMy];
+        hero.position = ccp(-50, winSize.height/2);
 		
 			//[sceneSpriteBatchNode addChild:turtle z:500 tag:123213];
-		[self addChild:turtle];
+		[self addChild:hero];
 		[self SetupGrid];
 		
 		
@@ -150,6 +195,9 @@ glColor4ub(255,0,255,255);
         self.isTouchEnabled = true;
         [self scheduleUpdate];
 		[self schedule:@selector(MoveMover) interval:.1];
+		
+		[self PlaceScore];
+		
 			//[self addChild:sceneSpriteBatchNode z:0];
 			
     }
@@ -158,7 +206,7 @@ glColor4ub(255,0,255,255);
 
 -(void) MoveMover
 {
-	for(MovingObject *mover in movers){
+	for(MovingObject *mover in sprite_objects){
 	
 		if(mover.characterType == smallmoving){
 			float currentY = mover.position.y;
@@ -207,16 +255,16 @@ glColor4ub(255,0,255,255);
 	
 	int pat_x1,pat_y1;
 	NSMutableArray *moveActions = [NSMutableArray arrayWithCapacity:[path count]];
-	CCAction *moveSequence = nil;
+	int i = 0;
 	for(PathPoint *point in path)
 	{
 		pat_x1 = [point GetPoint].x;
 		pat_y1= [point GetPoint].y;
 		[moveActions addObject:[CCMoveTo actionWithDuration:point.time position:CGPointMake((float) pat_x1, (float) pat_y1)]];
-
+		i++;
 		
 	}
-[turtle runAction:[CCSequence actionsWithArray:moveActions]];
+[hero runAction:[CCSequence actionsWithArray:moveActions]];
 	
 	[path removeAllObjects];
 }
@@ -230,7 +278,7 @@ glColor4ub(255,0,255,255);
 
 -(BOOL)selectSpriteForTouch:(CGPoint)touchLocation
 {
-    return CGRectContainsPoint(turtle.boundingBox, touchLocation);
+    return CGRectContainsPoint(hero.boundingBox, touchLocation);
 }
 
 
@@ -247,9 +295,9 @@ glColor4ub(255,0,255,255);
 	
 }
 - (void)panForTranslation:(CGPoint)translation {
-    if (turtle) {
-        CGPoint newPos = ccpAdd(turtle.position, translation);
-        turtle.position = newPos;
+    if (hero) {
+        CGPoint newPos = ccpAdd(hero.position, translation);
+        hero.position = newPos;
     }
    }
 
